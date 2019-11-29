@@ -1,7 +1,7 @@
 account_id = "2d4690bfb50a2c0455b74dc36b5c6a14"
 name = "test"
 type = "webpack"
-workers_dev = true
+workers_dev = false
 
 [site]
 bucket = "./public"
