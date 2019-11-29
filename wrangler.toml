@@ -1,4 +1,4 @@
-name = "test-d"
+name = "test"
 type = "webpack"
 
 account_id = "2d4690bfb50a2c0455b74dc36b5c6a14"
@@ -10,3 +10,4 @@ workers_dev = false
 [site]
 bucket = "./public"
 entry-point = "workers-site"
+workers_dev = false
