@@ -3,6 +3,7 @@ type = "webpack"
 workers_dev = false
 
 [site]
+workers_dev = false
 bucket = "./public"
 entry-point = "workers-site"
 route="https://*.asksumo.com/*"
