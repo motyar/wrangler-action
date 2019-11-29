@@ -1,19 +1,18 @@
-name: 'Deploy to Cloudflare Workers with Wrangler'
-branding:
-  icon: 'upload-cloud'
-  color: 'orange'
-description: 'Deploy your Cloudflare Workers applications and sites directly from GitHub, using Wrangler'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
-inputs:
-  apiKey:
-    description: "2d4690bfb50a2c0455b74dc36b5c6a14"
-    required: true
-  email:
-    description: "dharmmotyar@gmail.com"
-    required: true
-  environment:
-    description: "The environment you'd like to publish your Workers project to - must be defined in wrangler.toml"
-  workingDirectory:
-    description: "The relative path which Wrangler commands should be run from"
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - uses: actions/checkout@master
+      - name: Publish
+        uses: cloudflare/wrangler-action@1.0.0
+        with:
+          apiKey: ${{ secrets.CF_API_KEY }}
+          email: ${{ secrets.CF_EMAIL }}
