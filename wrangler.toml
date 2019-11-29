@@ -6,6 +6,9 @@ workers_dev = false
 [site]
 bucket = "./public"
 entry-point = "workers-site"
+route="https://*.asksumo.com/*"
+zone_id = "876b2012bec91ee930fd61a80094715e"
+account_id = "2d4690bfb50a2c0455b74dc36b5c6a14"
 
 [env.production]
 name = "docs-site"
